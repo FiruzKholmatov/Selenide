@@ -1,16 +1,17 @@
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CallBackTest {
 
-    private ChromeDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
     public static void setUpAll() {
 
-        System.setProperty("webdriver.chrome.driver", "driver/win/chromedriver.exe");
+       WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
