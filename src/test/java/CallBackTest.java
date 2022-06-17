@@ -38,7 +38,7 @@ public class CallBackTest {
         driver.findElement(By.cssSelector("[data-test-id=\"phone\"] input")).sendKeys("+79671740100");
         driver.findElement(By.cssSelector(".checkbox__box")).click();
         driver.findElement(By.cssSelector(".button")).click();
-        String actualText = driver.findElement(By.cssSelector(".paragraph")).getText().trim();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id=\"order-success\"]")).getText().trim();
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expected,actualText);
 
